@@ -79,6 +79,9 @@ autocmd! bufwritepost vimrc source C:\gVimPortable\Data\settings\_vimrc
 	autocmd FileType c,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 " }
 
+" ActionScript
+au BufNewFile,BufRead *.as,		setf actionscript
+
 """"""""""""""""""""""""""""""
 " => Key (re)Mappings
 """"""""""""""""""""""""""""""
