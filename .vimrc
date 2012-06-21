@@ -13,6 +13,7 @@ set background=dark
 colorscheme solarized
 
 set backupdir=~/tmp
+set directory=~/tmp
 
 set history=100
 set virtualedit=onemore
@@ -27,10 +28,10 @@ let g:mapleader = ","
 nmap <leader>w :w!<cr>
 
 " Fast editing of the .vimrc
-map <leader>e :e! C:\gVimPortable\Data\settings\_vimrc
+map <leader>e :e! ~/.vimrc
 
 " When vimrc is edited, reload it
-autocmd! bufwritepost vimrc source C:\gVimPortable\Data\settings\_vimrc
+autocmd! bufwritepost vimrc source ~/.vimrc
 
 """"""""""""""""""""""""""""""
 " => Vim UI
@@ -76,7 +77,7 @@ autocmd! bufwritepost vimrc source C:\gVimPortable\Data\settings\_vimrc
 	set pastetoggle=<F12>          	" pastetoggle (sane indentation on pastes)
 	"set comments=sl:/*,mb:*,elx:*/  " auto format comment blocks
 	" Remove trailing whitespaces and ^M chars
-	autocmd FileType c,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+	autocmd FileType c,cpp,java,php,js,python,twig,xml,yml,as autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 " }
 
 " ActionScript
