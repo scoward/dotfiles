@@ -1,16 +1,22 @@
 " Maintainer:	Stephen Coward <stephendcoward@gmail.com>
-" Last change:	2012 Jun 13
+" Last change:	2012 Jul 11
 
 """"""""""""""""""""""""""""""""""""""""""
 " General
 """"""""""""""""""""""""""""""""""""""""""
 set nocompatible
+call pathogen#infect()
 filetype plugin indent on  	" Automatically detect file types.
 syntax on   " syntax highlighting
 let g:vikiNameTypes = "sSeuix"
 
+" hides tabs?
+set hidden
+
 set background=dark
 colorscheme solarized
+
+set autoread
 
 set backupdir=~/tmp
 set directory=~/tmp
@@ -104,3 +110,8 @@ au BufNewFile,BufRead *.as,		setf actionscript
 " """""""""""""""""""""""""""
 let vimclojure#ParenRainbow = 1
 let vimclojure#HighlightBuiltins = 1
+
+""""""""""""""""""""""""""""
+" => Plugins
+""""""""""""""""""""""""""""
+source ~/.vim/vimrcs/plugins_config.vim
