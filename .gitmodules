@@ -4,3 +4,6 @@
 [submodule ".vim/bundle/bufexplorer"]
 	path = .vim/bundle/bufexplorer
 	url = https://github.com/vim-scripts/bufexplorer.zip
+[submodule ".vim/bundle/screen"]
+	path = .vim/bundle/screen
+	url = https://github.com/ervandew/screen.git
