@@ -39,6 +39,9 @@ map <leader>e :e! ~/.vimrc
 " When vimrc is edited, reload it
 autocmd! bufwritepost vimrc source ~/.vimrc
 
+" Buffer stuff
+:nnoremap <F5> :buffers<CR>:buffer<Space>
+
 """"""""""""""""""""""""""""""
 " => Vim UI
 """"""""""""""""""""""""""""""
