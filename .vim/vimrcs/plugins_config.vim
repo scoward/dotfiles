@@ -31,17 +31,6 @@ else
     let sep=":"
 endif
 
-let classpath = join(
-    \[".",
-    \ "src", "src/main/clojure", "src/main/resources",
-    \ "test", "src/test/clojure", "src/test/resources",
-    \ "classes", "target/classes",
-    \ "lib/*", "lib/dev/*",
-    \ "bin",
-    \ vimfiles."/lib/*"
-    \],
-    \ sep)
-
 " Actual VimClojure settings
 let vimclojureRoot = vimfiles."/bundle/vimclojure"
 let vimclojure#HighlightBuiltins=1
@@ -49,7 +38,7 @@ let vimclojure#HightlightContrib=1
 let vimclojure#DynamicHighlighting=1
 let vimclojure#ParenRainbow=1
 let vimclojure#WantNailgun=1
-let vimclojure#NailgunClient="/usr/bin/ng"
+let vimclojure#NailgunClient="~/.vim/bin/ng"
 let vimclojure#SplitSize = 15
 
 " Start vimclojure nailgun server (uses screen.vim to manage lifetime)
