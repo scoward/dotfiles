@@ -39,9 +39,6 @@ let g:maplocalleader = '.'
 " Fast saving
 nmap <leader>w :w!<cr>
 
-" Fast editing of the .vimrc
-map <leader>e :e! ~/.vimrc
-
 " When vimrc is edited, reload it
 autocmd! bufwritepost vimrc source ~/.vimrc
 
@@ -113,12 +110,6 @@ au BufNewFile,BufRead *.as,		setf actionscript
 	" Shortcuts
 	" Change Working Directory to that of the current file
 	cmap cd. lcd %:p:h
-
-"""""""""""""""""""""""""""""
-" => VimClojure section
-" """""""""""""""""""""""""""
-let vimclojure#ParenRainbow = 1
-let vimclojure#HighlightBuiltins = 1
 
 """"""""""""""""""""""""""""
 " => Plugins
