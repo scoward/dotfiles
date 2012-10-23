@@ -33,6 +33,9 @@ set ofu=syntaxcomplete#Complete
 let mapleader = ","
 let g:mapleader = ","
 
+let maplocalleader = '.'
+let g:maplocalleader = '.'
+
 " Fast saving
 nmap <leader>w :w!<cr>
 

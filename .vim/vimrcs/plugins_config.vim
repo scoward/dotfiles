@@ -48,11 +48,9 @@ let vimclojure#HighlightBuiltins=1
 let vimclojure#HightlightContrib=1
 let vimclojure#DynamicHighlighting=1
 let vimclojure#ParenRainbow=1
-"let vimclojure#WantNailgun=1
-"let vimclojure#NailgunClient= vimclojureRoot."/lib/nailgun/ng"
-"if windows
-"    let vimclojure#Nailgun = substitute(vimclojure#NailgunClient, "/", "\\", "g"). ".exe"
-"endif
+let vimclojure#WantNailgun=1
+let vimclojure#NailgunClient="/usr/bin/ng"
+let vimclojure#SplitSize = 15
 
 " Start vimclojure nailgun server (uses screen.vim to manage lifetime)
 "nmap <silent> <Leader>sc :execute "ScreenShell java -cp \"" . classpath . sep . vimclojureRoot . "/lib/*" . "\" vimclojure.nailgun.NGServer 127.0.0.1" <cr>
