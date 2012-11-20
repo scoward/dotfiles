@@ -18,8 +18,8 @@ colorscheme solarized
 
 set autoread
 
-set backupdir=~/tmp
-set directory=~/tmp
+set backupdir=/tmp
+set directory=/tmp
 
 set history=100
 set virtualedit=onemore
