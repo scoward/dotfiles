@@ -38,7 +38,7 @@ let vimclojure#HightlightContrib=1
 let vimclojure#DynamicHighlighting=1
 let vimclojure#ParenRainbow=1
 let vimclojure#WantNailgun=1
-let vimclojure#NailgunClient="~/.vim/bin/ng"
+let vimclojure#NailgunClient=$HOME . "/.vim/bin/ng"
 let vimclojure#SplitSize = 15
 
 " Start vimclojure nailgun server (uses screen.vim to manage lifetime)
