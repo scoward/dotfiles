@@ -41,7 +41,7 @@ myKeys =
          , ("M-S-<Up>"   , withFocused $ snapShrink D Nothing)
          , ("M-S-<Down>" , withFocused $ snapGrow   D Nothing)
 
-         , ("M-u",      spawnHere "google-chrome")
+         , ("M-u",      spawnHere "chromium-browser")
          , ("M-f",      spawnHere "firefox")
          , ("M-S-l",    spawn "gnome-screensaver-command -l")
 

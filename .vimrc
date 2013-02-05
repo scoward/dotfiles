@@ -6,6 +6,16 @@
 """"""""""""""""""""""""""""""""""""""""""
 set nocompatible
 call pathogen#infect()
+
+filetype off
+
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'Valloric/YouCompleteMe'
+
 filetype plugin indent on  	" Automatically detect file types.
 syntax on   " syntax highlighting
 let g:vikiNameTypes = "sSeuix"
