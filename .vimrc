@@ -11,10 +11,19 @@ filetype off
 
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
+set rtp+=$GOROOT/misc/vim
 
 Bundle 'gmarik/vundle'
 
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'guns/vim-clojure-static'
+Bundle 'tpope/vim-foreplay'
+Bundle 'tpope/vim-classpath'
+Bundle 'dart-lang/dart-vim-plugin'
+Bundle 'bling/vim-airline'
+Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/syntastic'
+Bundle 'jnwhiteh/vim-golang'
 
 filetype plugin indent on  	" Automatically detect file types.
 syntax on   " syntax highlighting
