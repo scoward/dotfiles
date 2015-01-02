@@ -23,7 +23,8 @@ Bundle 'dart-lang/dart-vim-plugin'
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/syntastic'
-Bundle 'jnwhiteh/vim-golang'
+Bundle 'fatih/vim-go'
+Bundle 'wting/rust.vim'
 
 filetype plugin indent on  	" Automatically detect file types.
 syntax on   " syntax highlighting
@@ -113,6 +114,9 @@ autocmd! bufwritepost vimrc source ~/.vimrc
 
 " ActionScript
 au BufNewFile,BufRead *.as,		setf actionscript
+
+" Markdown textwidth
+au BufRead,BufNewFile *.md setlocal textwidth=80
 
 """"""""""""""""""""""""""""""
 " => Key (re)Mappings
