@@ -24,7 +24,11 @@ Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/syntastic'
 Bundle 'fatih/vim-go'
-Bundle 'wting/rust.vim'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'pangloss/vim-javascript'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'Raimondi/delimitMate'
 
 filetype plugin indent on  	" Automatically detect file types.
 syntax on   " syntax highlighting
@@ -106,14 +110,17 @@ autocmd! bufwritepost vimrc source ~/.vimrc
 	set tabstop=4 					" an indentation every four columns
 	set softtabstop=4 				" let backspace delete indent
 	"set matchpairs+=<:>            	" match, to be used with % 
-	set pastetoggle=<F12>          	" pastetoggle (sane indentation on pastes)
+	set pastetoggle=<F2>          	" pastetoggle (sane indentation on pastes)
 	"set comments=sl:/*,mb:*,elx:*/  " auto format comment blocks
 	" Remove trailing whitespaces and ^M chars
-	autocmd FileType c,cpp,java,php,js,python,twig,xml,yml,as autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+	autocmd FileType c,cpp,java,php,js,python,twig,xml,yml,as,go autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 " }
 
 " ActionScript
 au BufNewFile,BufRead *.as,		setf actionscript
+
+" Spark INO as cplusplus
+au BufNewFile,BufRead,BufReadPost *.ino,	set filetype=cpp
 
 " Markdown textwidth
 au BufRead,BufNewFile *.md setlocal textwidth=80
@@ -133,6 +140,9 @@ au BufRead,BufNewFile *.md setlocal textwidth=80
 	" Shortcuts
 	" Change Working Directory to that of the current file
 	cmap cd. lcd %:p:h
+    
+    noremap <F12> <Esc>:syntax sync fromstart<CR>
+    inoremap <F12> <C-o>:syntax sync fromstart<CR>
 
 """"""""""""""""""""""""""""
 " => Plugins

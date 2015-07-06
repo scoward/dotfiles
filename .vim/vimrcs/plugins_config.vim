@@ -121,3 +121,15 @@ let vimclojure#SplitSize = 15
 "let g:neocomplcache_omni_patterns.php = '[^.\t]->\h\w*\|\h\w*::'
 "let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 "let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntactic_always_populate_loc_list = 1
+let g:syntactic_auto_loc_list = 1
+let g:syntactic_check_on_open = 1
+let g:syntactic_check_on_wq = 0
+
+let g:syntastic_html_tidy_exec = 'tidy5'
+let g:syntastic_html_tidy_ignore_errors = [ ' proprietary attribute "i18n"', '<meta> proprietary attribute "property"' ]
